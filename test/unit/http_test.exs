@@ -25,6 +25,6 @@ defmoduler Multiverses.FinchTest.Unit.HttpTest do
 
     assert_receive {:headers, headers}
     assert universe_link = :proplists.get_value("universe", headers, nil)
-    assert test_pid in (universe_link |> Base.decode64! |> :erlang.binary_to_term)
+    assert test_pid in (universe_link |> Base.url_decode64! |> :erlang.binary_to_term)
   end
 end

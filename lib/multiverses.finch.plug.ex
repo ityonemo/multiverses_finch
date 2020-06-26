@@ -15,7 +15,7 @@ defmodule Multiverses.Finch.Plug do
             [] -> conn
             [universe] ->
               universe |> IO.inspect(label: "17")
-              |> Base.decode64!
+              |> Base.url_decode64!
               |> :erlang.binary_to_term
               |> Multiverses.port()
 
