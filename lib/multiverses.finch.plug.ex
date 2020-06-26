@@ -14,7 +14,7 @@ defmodule Multiverses.Finch.Plug do
           case Plug.Conn.get_req_header(conn, "universe") do
             [] -> conn
             [universe] ->
-              universe |> IO.inspect(label: "17")
+              universe
               |> Base.url_decode64!
               |> :erlang.binary_to_term
               |> Multiverses.port()
