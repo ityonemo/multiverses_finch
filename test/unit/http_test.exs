@@ -1,4 +1,6 @@
-defmodule Multiverses.FinchTest.Unit.HttpTest do
+import MultiversesTest.Replicant
+
+defmoduler Multiverses.FinchTest.Unit.HttpTest do
   use ExUnit.Case, async: true
   use Multiverses, with: Finch
 
