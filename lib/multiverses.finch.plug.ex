@@ -8,6 +8,8 @@ defmodule Multiverses.Finch.Plug do
 
     if Application.get_env(otp_app, :use_multiverses) do
       quote do
+        require Multiverses
+
         plug :port_universe
 
         def port_universe(conn, _opts) do

@@ -2,11 +2,12 @@ defmodule MultiversesFinch.MixProject do
   use Mix.Project
 
   @finch_version "0.3.0"
+  @version "0.1.0"
 
   def project do
     [
       app: :multiverses_finch,
-      version: @finch_version,
+      version: @version,
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -27,7 +28,7 @@ defmodule MultiversesFinch.MixProject do
     [
       # parent library that's being cloned
       {:finch, "~> #{@finch_version}"},
-      {:multiverses, "~> 0.4.1", runtime: false},
+      {:multiverses, "~> 0.5.0", runtime: false},
 
       # for testing
       {:bypass, "~> 1.0", only: :test},
