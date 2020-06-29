@@ -11,7 +11,18 @@ defmodule MultiversesFinch.MixProject do
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       elixirc_paths: elixirc_paths(Mix.env()),
-      deps: deps()
+      deps: deps(),
+      package: [
+        description: "multiverse support for Finch HTTP Library Library",
+        licenses: ["MIT"],
+        files: ~w(lib mix.exs README* LICENSE* VERSIONS*),
+        links: %{"GitHub" => "https://github.com/ityonemo/multiverses_finch"}
+      ],
+      docs: [
+        main: "Multiverses",
+        extras: ["README.md"],
+        source_url: "https://github.com/ityonemo/multiverses_finch"
+      ],
     ]
   end
 
