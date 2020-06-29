@@ -1,4 +1,5 @@
 defmodule TestModuleApi do
+  @moduledoc false
   @callback call() :: nil
 end
 

@@ -19,7 +19,7 @@ defmodule MultiversesFinch.MixProject do
         links: %{"GitHub" => "https://github.com/ityonemo/multiverses_finch"}
       ],
       docs: [
-        main: "Multiverses",
+        main: "Multiverses.Finch",
         extras: ["README.md"],
         source_url: "https://github.com/ityonemo/multiverses_finch"
       ],
@@ -44,7 +44,11 @@ defmodule MultiversesFinch.MixProject do
       # for testing
       {:bypass, "~> 1.0", only: :test},
       {:plug_cowboy, "~> 2.0", only: :test},
-      {:mox, "~> 0.5.2", only: :test}
+      {:mox, "~> 0.5.2", only: :test},
+      {:credo, "~> 1.3", only: [:dev, :test], runtime: false},
+      {:excoveralls, "~> 0.11", only: :test, runtime: false},
+      {:ex_doc, "~> 0.21.2", only: :dev, runtime: false},
+      {:dialyxir, "~> 0.5.1", only: :dev, runtime: false}
     ]
   end
 end
