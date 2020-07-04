@@ -39,7 +39,7 @@ defmodule MultiversesFinch.MixProject do
     [
       # parent library that's being cloned
       {:finch, "~> #{@finch_version}"},
-      {:multiverses, "~> 0.5.0", runtime: false},
+      {:multiverses, "~> 0.6.0", runtime: false},
 
       # for testing
       {:bypass, "~> 1.0", only: :test},
