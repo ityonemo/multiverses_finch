@@ -10,7 +10,7 @@ by adding `multiverses_finch` to your list of dependencies in `mix.exs`:
 ```elixir
 def deps do
   [
-    {:multiverses_finch, "~> 0.1.0", runtime: false}
+    {:multiverses_finch, "~> 0.2.0", runtime: false}
   ]
 end
 ```
