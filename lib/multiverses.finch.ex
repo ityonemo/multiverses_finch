@@ -13,11 +13,11 @@ defmodule Multiverses.Finch do
   downstream using the `Multiverses.Finch.Plug` module.
   """
 
-  use Multiverses.MacroClone,
+  use Multiverses.Clone,
     module: Finch,
     except: [build: 2, build: 3, build: 4]
 
-  defclone build(method, url, headers \\ [], body \\ nil) do
+  def build(method, url, headers \\ [], body \\ nil) do
     require Multiverses
     link_id = Multiverses.link() |> :erlang.term_to_binary |> Base.url_encode64
     Elixir.Finch.build(method,

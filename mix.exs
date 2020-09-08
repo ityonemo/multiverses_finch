@@ -1,8 +1,9 @@
 defmodule MultiversesFinch.MixProject do
   use Mix.Project
 
+  @multiverses_version "0.7.0"
   @finch_version "0.3.0"
-  @version "0.2.0"
+  @version "0.3.0"
 
   def project do
     [
@@ -39,7 +40,7 @@ defmodule MultiversesFinch.MixProject do
     [
       # parent library that's being cloned
       {:finch, "~> #{@finch_version}"},
-      {:multiverses, "~> 0.6.0", runtime: false},
+      {:multiverses, "~> #{@multiverses_version}"},
 
       # for testing
       {:bypass, "~> 1.0", only: :test},
